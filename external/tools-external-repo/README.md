@@ -1,7 +1,6 @@
 # External tools
 
-The tools in this directory are for use with GitHub.com (rackerlabs) for
-external documentation.
+The tools in the `sandbox-internal-docs-starter-kit/external/tools-external-repo` directory are are for use with GitHub.com (rackerlabs) for external documentation.
 
 The external documentation system is deconst, an open-source end-to-end documentation delivery system built by a
 former Racker. Deconst deploys to two Rackspace sites,
@@ -40,6 +39,8 @@ deploying to the support.rackspace and developer.rackspace websites.
 
 ## Using the tools
 
+Perform the following tasks to set up your own documentation repo for publishing.
+
 ### Create a new repository
 
 Most external repositories are a part of the `Rackerlabs`
@@ -55,26 +56,70 @@ Team](mailto:mailto:infodev-tools@rackspace.com) that you added the
 service account to a new repository. The team then accepts the service
 account invitation to that repo.
 
-### Add the configuration files
+### Customize the configuration files
 
-1. Download the files from the `tools-external-repo` directory and put them in the root of your repo.
-
-2. In the files that you copied, replace the elements shown in the following sections to match your repo.
+The configuration files contain placeholders and variable that must be updated to display the correct values.
 
 #### Sphinx-RST-based
 
-1.  Replace all instances of `<repoName>` to match the name of the
-    repository where you are working (for example,
-    `docs-cloud-networks`).
-2.  In the **conf.py** file:
+#### Sphinx-RST-based (if your content is written in RST)
 
-    - Replace all instances of `<officialProjectName>` with your
-      project's official name (for example, `Rackspace Cloud
-      Networks`).
-    - Replace `<year>` with the current year.
-    - Replace `<release>` with the current version number.
-    - Replace `<product-name>` with the product name in lower case
-      (for example `cloud-networks`).
+RST repositories mirror the directory structure of the `sandbox-internal-docs-starter-kit/external` folder.
+
+1. From the `external` directory of the `sandbox-internal-docs-starter-kit` repository, copy the following files and the `docs` folder (and its contents) to the root directory of your repo:
+
+
+    docs/
+    .gitignore
+    code-block.py
+    CONTRIBUTING.rst
+    GITHUBING.rst
+    LICENSE
+    requirements.txt
+    tox.ini
+
+The `docs` folder contains the following files and folders:
+
+    \_static/
+    \_deconst.json
+    \_toc.rst
+    conf.py
+    index.rst
+    make.bat
+    Makefile
+    spelling_wordlist.txt
+    style-guidelines.md
+
+2. Copy the applicable template folders from the `sandbox-internal-docs-starter-kit/docs` folder to the docs folder in your new repository.
+
+3. Replace the following elements in the files to match your repo by
+   using a search-and-replace system, such as the repository search
+   bar here in GitHub or the search-and-replace function in
+   [Atom](https://atom.io).In the root directory.
+
+- Replace all instances of `<orgNameOrUsername>` to match your GitHub
+  Enterprise organization (preferred; for example, `IX`) or username
+  (for example, `rakr0123`). We recommend using the organization name.
+- Replace all instances of `<repoName>` to match the name of the
+  repository where you are working (for example, `handbook`).
+- In `conf.py`:
+  - Replace all instances of `<officialProjectName>` with your
+    project's official name (for example, `Rackspace Engineering
+    Handbook`).
+  - Replace `<year>` with the current year.
+  - In the `rst_epilog =` section, replace any necessary variables with the correct names (<officialProjectName>, <officialProjectName API>, <version>, <PRODUCT NAME>).
+
+4. Delete the `template-how-to` folder (this folder contains Markdown template for how-to articles) and any other templates you are not using to create your content.
+
+##### Builds and spelling checks
+
+The build checks spelling in your documents against the
+`doc/spelling_wordlist.txt` file by running `tox -e checkspelling`. If
+misspellings are found, the build fails and no staging link is
+generated. You can see the specific spelling errors in the Jenkins
+build file (click `Details` in your GitHub PR output.) If your project
+uses unique terms, abbreviations, or non-typical names, add them to
+`spelling_wordlist.txt` and re-check the build.
 
 #### Markdown-based
 

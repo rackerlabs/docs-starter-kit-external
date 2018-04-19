@@ -1,6 +1,6 @@
 # Internal Tools
 
-The tools in the `docs-starter-kit/tools-internal-repo` directory are
+The tools in the `sandbox-internal-docs-starter-kit/tools-internal-repo` directory are
 for use with documentation in GitHub Enterprise
 (`github.rackspace.com`).
 
@@ -43,12 +43,16 @@ markup language used for the documentation in the repo.
 
 Perform the following tasks to set up your own documentation repo for publishing.
 
-### Add a gh-pages branch to your repo
+### Create a new repository
 
 **Note: Your repository must be public. Jenkins will not work with
-private repos.** If you have converted a private repo to public, you
+private repos.**
+
+If you have converted a private repo to public, you
 may need to restart the scan from the organization page at
 <https://infodev.jenkins.cit.rackspace.net/job/IXOrg/>.
+
+### Add a gh-pages branch to your repo
 
 1. Add an empty branch called `gh-pages` to your repo. We recommend adding the branch before you add content to the repo. Otherwise, create a new "orphan" branch from master.
 
@@ -102,20 +106,84 @@ Jenkins uses an organization-level webhook to deliver content. Your organization
 
 7. Click **Add webhook**.
 
-### Add the configuration files
+### Customize the configuration files
 
-1. From the directory that matches the content of your repo (e.g., the
-   Sphinx-RST directory for RST files), download the entire contents
+The configuration files contain placeholders and variable that must be updated to display the correct values.
+
+#### Sphinx-RST-based (if your content is written in RST)
+
+RST repos mirror the directory structure of the `sandbox-internal-docs-starter-kit`.
+
+1. From the root directory of the `sandbox-internal-docs-starter-kit` repository, copy the following files and the `docs` folder (and its contents) to the root directory of your repository:
+
+    docs/
+    .gitignore
+    build.sh
+    CONTRIBUTING.rst
+    GITHUBING.rst
+    Jenkinsfile
+    LICENSE
+    Makefile
+    publish.sh
+    README.rst
+    requirements.txt
+    test.sh
+    tox.ini
+    variables.sh
+
+The `docs` folder contains the following files and folders:
+
+    \_static/
+    template-api-guide/
+    template-how-to/
+    template-user-guide/
+    \_deconst.json
+    \_toc.rst
+    conf.py
+    index.rst
+    make.bat
+    Makefile
+    spelling_wordlist.txt
+    style-guidelines.md
+
+2. Replace the following elements in the files to match your repository by
+   using a search-and-replace system, such as the repository search
+   bar here in GitHub or the search-and-replace function in
+   [Atom](https://atom.io).In the root directory.
+
+- Replace all instances of `<orgNameOrUsername>` to match your GitHub
+  Enterprise organization (preferred; for example, `IX`) or username
+  (for example, `rakr0123`). We recommend using the organization name.
+- Replace all instances of `<repoName>` to match the name of the
+  repository where you are working (for example, `handbook`).
+- In `conf.py`:
+  - Replace all instances of `<officialProjectName>` with your
+    project's official name (for example, `Rackspace Engineering
+    Handbook`).
+  - Replace `<year>` with the current year.
+  - In the `rst_epilog =` section, replace any necessary variables with the correct names (<officialProjectName>, <officialProjectName API>, <version>, <PRODUCT NAME>).
+
+3. Delete the `template-how-to` folder (this folder contains Markdown template for how-to articles) and any other templates you are not using to create your content.
+
+##### Builds and spelling checks
+
+The build checks spelling in your documents against the
+`doc/spelling_wordlist.txt` file by running `tox -e checkspelling`. If
+misspellings are found, the build fails and no staging link is
+generated. You can see the specific spelling errors in the Jenkins
+build file (click `Details` in your GitHub PR output.) If your project
+uses unique terms, abbreviations, or non-typical names, add them to
+`spelling_wordlist.txt` and re-check the build.
+
+#### Jekyll-Markdown-based (if your content is written in Markdown)
+
+1. Use the `Jekyll-Markdown-based` directory, download the entire contents
    (shell script files, config files, and the Jenkinsfile) and put
    them in the root of your repo.
 2. Replace the following elements in the files to match your repo by
    using a search-and-replace system, such as the repository search
    bar here in GitHub or the search-and-replace function in
    [Atom](https://atom.io).
-
-#### Jekyll-Markdown-based (if your content is written in Markdown)
-
-Use the `Jekyll-Markdown-based` directory.
 
 - Replace all instances of `<orgNameOrUsername>` to match your GitHub Enterprise organization (for example, `IX`) or username (for example, `rakr0123`). We recommend using the organization name.
 - Replace all instances of `<repoName>` to match the name of the repo where you are working (for example, `handbook`).
@@ -124,10 +192,15 @@ Use the `Jekyll-Markdown-based` directory.
    - Replace `<teamEmail>` with your team's email address.
    - Replace `<multiLineDescription>` with a short description of your product (for example, `A handbook for any engineer at Rackspace.`). The description can take up multiple lines.
 
-
 #### RAML-based (for API documentation written in RAML)
 
-Use the `RAML-based` directory.
+1. Use the `RAML-based` directory, download the entire contents
+   (shell script files, config files, and the Jenkinsfile) and put
+   them in the root of your repo.
+2. Replace the following elements in the files to match your repo by
+   using a search-and-replace system, such as the repository search
+   bar here in GitHub or the search-and-replace function in
+   [Atom](https://atom.io).
 
 **Note:** Only RAML 1.0 is supported. If you use RAML 0.8, contact the
 [InfoDev Tools Team](mailto:mailto:infodev-tools@rackspace.com).
@@ -145,64 +218,3 @@ Use the `RAML-based` directory.
             [My RAML 1](my-raml-1.html)
             [My RAML 2](my-raml-2.html)
             [My RAML 3](my-raml-3.html)
-
-
-#### Sphinx-RST-based (if your content is written in RST)
-
-Use the `Sphinx-RST-based` directory.
-
-- Replace all instances of `<orgNameOrUsername>` to match your GitHub
-  Enterprise organization (preferred; for example, `IX`) or username
-  (for example, `rakr0123`). We recommend using the organization name.
-- Replace all instances of `<repoName>` to match the name of the
-  repository where you are working (for example, `handbook`).
-- In `conf.py`:
-  - Replace all instances of `<officialProjectName>` with your
-    project's official name (for example, `Rackspace Engineering
-    Handbook`).
-  - Replace `<year>` with the current year.
-
-
-##### RST Directory structure
-
-The RST repos are set up slightly differently than other repos. The
-`Jenkinsfile`, `Makefile`, `test.sh`, `build.sh`, `publish.sh`,
-`variables.sh`, `tox.ini`, and `requirements.txt` files go in the root
-of the repo. The `conf.py`, `make.bat`, `Makefile0`, and
-`spelling_wordlist.txt` files go into the directory (typically `doc/`)
-containing your content. After you move the `Makefile0` file to
-`doc/`, rename it to `Makefile`.
-
-Here is a typical RST project directory structure:
-
-      CONTRIBUTING.rst
-      GITHUBING.rst
-      Jenkinsfile
-      LICENSE
-      Makefile
-      README.rst
-      build.sh
-      publish.sh
-      requirements.txt
-      test.sh
-      tox.ini
-      variables.sh
-      docs/
-        Makefile (was Makefile0)
-        chapter.rst
-        common/
-        conf.py
-        index.rst
-        make.bat
-        spelling_wordlist.txt
-
-
-##### Builds and spelling checks
-
-The build checks spelling in your documents against the
-`doc/spelling_wordlist.txt` file by running `tox -e checkspelling`. If
-misspellings are found, the build fails and no staging link is
-generated. You can see the specific spelling errors in the Jenkins
-build file (click `Details` in your GitHub PR output.) If your project
-uses unique terms, abbreviations, or non-typical names, add them to
-`spelling_wordlist.txt` and re-check the build.
