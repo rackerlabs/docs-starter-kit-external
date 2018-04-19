@@ -31,20 +31,20 @@ audience is and what kind of content you need to produce for them.
 2. What type of documentation are you creating?
 
    - **API content**: The repo has
-     [templates](https://github.rackspace.com/IX/sandbox-internal-docs-starter-kit/tree/master/docs/template-api-guide)
+     [templates](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/docs/template-api-guide)
      for API getting started and reference content. You create your
      repo with the Sphinx configuration files and write your
      documentation in RST.
 
    - **End-user content**: The repo has
-     [templates](https://github.rackspace.com/IX/sandbox-internal-docs-starter-kit/tree/master/docs/template-user-guide)
+     [templates](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/docs/template-user-guide)
      for user guide content, including installation, getting started,
      configuration, use cases, and using a product or service. You
      create your repo with the Sphinx configuration files and write
      your documentation in RST.
 
    - **Support articles**: The repo has
-     [templates](https://github.rackspace.com/IX/sandbox-internal-docs-starter-kit/tree/master/docs/template-how-to)
+     [templates](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/docs/template-how-to)
      for creating stand-alone articles that are published on
      **support.rackspace.com**. You create your repo with the Jekyll
      configuration files and write your documentation in Markdown.
@@ -78,7 +78,7 @@ publish content.
    add **Admin** access to the repo for the **ix-tools** team so that they
    can provide assistance as needed.
 4. Fork the [docs-starter-kit
-   repo](https://github.rackspace.com/IX/sandbox-internal-docs-starter-kit) to create
+   repo](https://github.rackspace.com/IX/sandbox-docs-starter-kit) to create
    your own copy of it.
 5. Clone your fork of the docs-starter-kit repo to your local computer.
 6. Copy files from your local copy of docs-starter-kit into the local
@@ -86,10 +86,10 @@ publish content.
 7. Set up builds for publishing your documentation:
    - Instructions for internal documents are in the
      [tools-internal-repo
-     folder](https://github.rackspace.com/IX/sandbox-internal-docs-starter-kit/tree/master/tools-internal-repo).
+     folder](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/tools-internal-repo).
    - Instructions for external documents are in the
      [tools-external-repo
-     folder](https://github.rackspace.com/IX/sandbox-internal-docs-starter-kit/tree/master/external/tools-external-repo).
+     folder](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/external-repo/tools-external-repo).
 8. Ensure that your content builds locally without errors or
     warnings. Ensure that the generated content looks like you expect
     by opening the HTML files in your browser.

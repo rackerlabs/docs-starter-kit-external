@@ -1,6 +1,6 @@
 # External tools
 
-The tools in the `sandbox-internal-docs-starter-kit/external/tools-external-repo` directory are are for use with GitHub.com (rackerlabs) for external documentation.
+The tools in the `sandbox-docs-starter-kit/external-repo/tools-external-repo` directory are are for use with GitHub.com (rackerlabs) for external documentation.
 
 The external documentation system is deconst, an open-source end-to-end documentation delivery system built by a
 former Racker. Deconst deploys to two Rackspace sites,
@@ -64,9 +64,9 @@ The configuration files contain placeholders and variable that must be updated t
 
 #### Sphinx-RST-based (if your content is written in RST)
 
-RST repositories mirror the directory structure of the `sandbox-internal-docs-starter-kit/external` folder.
+RST repositories mirror the directory structure of the `sandbox-docs-starter-kit/external` folder.
 
-1. From the `external` directory of the `sandbox-internal-docs-starter-kit` repository, copy the following files and the `docs` folder (and its contents) to the root directory of your repo:
+1. From the `external` directory of the `sandbox-docs-starter-kit` repository, copy the following files and the `docs` folder (and its contents) to the root directory of your repo:
 
 
     docs/
@@ -90,7 +90,7 @@ The `docs` folder contains the following files and folders:
     spelling_wordlist.txt
     style-guidelines.md
 
-2. Copy the applicable template folders from the `sandbox-internal-docs-starter-kit/docs` folder to the docs folder in your new repository.
+2. Copy the applicable template folders from the `sandbox-docs-starter-kit/docs` folder to the docs folder in your new repository.
 
 3. Replace the following elements in the files to match your repo by
    using a search-and-replace system, such as the repository search
