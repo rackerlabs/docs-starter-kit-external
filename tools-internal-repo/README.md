@@ -1,6 +1,6 @@
 # Internal Tools
 
-The tools in the `sandbox-internal-docs-starter-kit/tools-internal-repo` directory are
+The tools in the `sandbox-docs-starter-kit/tools-internal-repo` directory are
 for use with documentation in GitHub Enterprise
 (`github.rackspace.com`).
 
@@ -15,16 +15,27 @@ builds, and publishes documentation automatically.
 The internal publication process is as follows:
 
 1. Make changes to documentation in a new branch (not `master` or `gh-pages`)
-    or make changes in your fork or clone of the repo.
+   or make changes in your fork or clone of the repo.
 
 2. Open a PR on `master`.
 
-3. Wait for Jenkins to post a status update to your PR. You will see a green check mark and a comment with a staging link if the PR passes. You will see a red X if the PR fails.
+3. Wait for Jenkins to post a status update to your PR. You will see a green
+   check mark and a comment with a staging link if the PR passes. You will see
+   a red X if the PR fails.
 
-    - If the PR passes, a green check mark and a comment with a staging link are displayed. Click the staging link to view the content and ensure that it looks correct.
-    - If the PR fails, a red X is displayed. Use the Details link to see where the build failed.
+    - If the PR passes, a green check mark and a comment with a staging link
+      are displayed. Click the staging link to view the content and ensure
+      that it looks correct.
+    - If the PR fails, a red X is displayed. Use the Details link to see where
+      the build failed.
+    - If neither of the above occurs, you might have to look at the build logs
+      for the repository that you are working with to see if there is an
+      error. Open https://infodev.jenkins.cit.rackspace.net/view/all/builds
+      and go to the logs to determine what the errors are. Then make the
+      correction in your PR and push it, which causes the build to start again.
 
-4. After the PR passes and the content on staging looks correct, request a review from an IX team member.
+4. After the PR passes and the content on staging looks correct, request a
+   review from an IX team member.
 
 5. The IX team member either provides comments or merges the PR.
 
@@ -112,9 +123,9 @@ The configuration files contain placeholders and variable that must be updated t
 
 #### Sphinx-RST-based (if your content is written in RST)
 
-RST repos mirror the directory structure of the `sandbox-internal-docs-starter-kit`.
+RST repos mirror the directory structure of the `sandbox-docs-starter-kit`.
 
-1. From the root directory of the `sandbox-internal-docs-starter-kit` repository, copy the following files and the `docs` folder (and its contents) to the root directory of your repository:
+1. From the root directory of the `sandbox-docs-starter-kit` repository, copy the following files and the `docs` folder (and its contents) to the root directory of your repository:
 
     docs/
     .gitignore
