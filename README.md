@@ -74,7 +74,7 @@ publish content.
    add **Admin** access to the repo for the **ix-tools** team so that they
    can provide assistance as needed.
 4. Fork the [docs-starter-kit
-   repo] (https://github.rackspace.com/IX/sandbox-docs-starter-kit) to create
+   repo](https://github.rackspace.com/IX/sandbox-docs-starter-kit) to create
    your own copy of it.
 5. Clone your fork of the docs-starter-kit repo to your local computer.
 6. Copy files from your local copy of docs-starter-kit into the local
