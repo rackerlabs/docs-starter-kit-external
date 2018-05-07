@@ -58,8 +58,8 @@ of your new guide. Create your content in the ``docs`` folder.
 
 ### Content files and structure
 
-The content for the API guide is developed in reStructuredText (RST). The
-API guide templates include the following template and index files that
+The content for the user guide is developed in reStructuredText (RST). The
+user guide templates include the following template and index files that
 create a user guide with the following structure and file names:
 
 - Opening page and top-level index (index.rst)
