@@ -77,26 +77,6 @@ following files:
 -  For an API guide, see this [README
    file](https://github.rackspace.com/IX/docs-starter-kit/blob/master/template-api-guide/README.md).
 
-In addition to the content files, the following files are included in
-your ``docs`` folder:
-
--  ``conf.py``
--  ``make.bat``
--  ``Makefile``
--  ``spelling_wordlist.txt``
-
-At the root level of your repo, you will also see these files:
-
--  ``build.sh``
--  ``Jenkinsfile``
--  ``LICENSE``
--  ``Makefile``
--  ``publish.sh``
--  ``requirements.txt``
--  ``test.sh``
--  ``tox.ini``
--  ``variables.sh``
-
 ## Write your content
 
 After you create and set up your repo, you can create your content and
