@@ -63,43 +63,10 @@ user guide templates include the following template and index files that
 create a user guide with the following structure and file names:
 
 - Opening page and top-level index (index.rst)
-- Common information across all user guide and document
-  conventions (common/common-front.rst)
-- Product overview (overview/index.rst)
-  - System requirements (overview/system-requirements.rst)
-  - Reference architecture (overview/architecture.rst)
-  - Compatibility (overview/compatibility.rst)
-  - Features (overview/features.rst)
-  - Components (overview/components.rst)
-- Installing (installing/index.rst)
-  - Planning (installing/planning.rst)
-  - Deploying (installing/deploying.rst)
-  - Verifying (installing/verifying.rst)
-- Getting started (getting-started/index.rst)
-  - Configuring (getting-started/configuring.rst)
-  - Accessing (getting-started/accessing.rst)
-  - Navigating (getting-started/navigating.rst)
-- Using (using/index.rst)
-  - Use cases (using/use-cases/index.rst)
-    - Use case template (using/use-cases/use-case.rst)
-- Administering (administering/index.rst)
-  - Roles and permissions (administering/roles-permissions.rst)
-  - Notifications (administering/notifications.rst)
-  - Monitoring (administering/monitoring.rst)
-  - Logging (administering/logging.rst)
-  - Patching and upgrading (administering/patching-upgrading.rst)
-- Support (support/index.rst)
-  - Troubleshooting (support/troubleshooting.rst)
-  - Spheres of support (support/spheres-support.rst)
-  - Licensing (support/licensing.rst)
-- API (api.rst)
-- Document history and additional information (common/common-end.rst)
-  - Additional resources (common/common-end.rst)
-  - Copyright and disclaimer (common/common-end.rst)
-
-### Example files
-
-The [Examples directory](https://github.rackspace.com/IX/docs-starter-kit/tree/master/template-user-guide/doc/examples) provides example content and structure for each template. As you use the templates to add content to your doc repo, refer to these examples to see typical content and common structures for your content
+- Getting started (common-gs)
+- General API information (general-api-info)
+- API reference (api-reference)
+- Release notes (release-notes-collection)
 
 ## Updating the files
 
@@ -110,23 +77,17 @@ Follow these steps to update the files in your new repo.
 
     Add or delete templates as necessary to fit your content.
 
-2.  Update reference anchors.
-
-    Update the reference anchors for each RST file in the ``user-guide`` folder. The reference anchors appear the top of the file.   Replace XXX with your product code (for example, change  ``_deploying-XXX-ug:`` to ``_deploying-BPI-ug:``).
-
-    Each topic must have a reference anchor if you want to link to that topic from another topic. Reference anchors must be unique across the project.
-
-3.  Test your build locally as you add content to find and fix any errors.
+2.  Test your build locally as you add content to find and fix any errors.
 
     You can use ``tox``, which is set up when you set up publishing for your
     repo. You can also run the ``make.bat`` file, which is also set up at that
     time.
 
-4. Check in your changes.
+3. Check in your changes.
 
     When a PR is committed against your repo, the Jenkins server begins testing the PR. After it passes, a staging link appears in  your  PR, for example, https://github.rackspace.com/IX/docs-XXX/pull/6. Staging links are valid for 14 days. Merging the PR publishes the doc to the production site, for example, https://pages.github.rackspace.com/IX/docs-XXX/. Until the production site is linked to the main landing page, Rackers must use the staging link to see the content, so you can continue to update and merge until the content is complete.
 
-5.  When your doc is ready to be published to either the [internal
+4.  When your doc is ready to be published to either the [internal
     docs landing
     page](https://pages.github.rackspace.com/IX/internal-docs-landing-page/)
     or the [external docs landing
