@@ -125,7 +125,8 @@ build it.
 8.	Request reviews of your PR from the Information Development team in the
     ``#docs`` channel in Slack.
 9.	After all review comments have been addressed, you can merge your
-    PR, which automatically starts the documentation build and
+    PR, which automatically starts the documentation build, and when
+    properly linked to a landing page,
     publishes the documentation either on the [internal docs landing
     page](https://pages.github.rackspace.com/IX/internal-docs-landing-page/)
     or the [external docs landing
