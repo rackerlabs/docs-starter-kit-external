@@ -19,7 +19,7 @@ This release creates a buildable RST project (changes):
 - Added docs folder.
 - Moved user guide and API templates into docs folder to support products that have both docs.
 - Moved RST build files to correct build locations.
-- Deleted RST build file folders (internal and external). 
+- Deleted RST build file folders (internal and external).
 – RST build files should now be updated in build locations.
 - Added external-repo folder that has correct directory structure to build external RST projects.
 - Updated build procedures (readme files).
@@ -95,23 +95,25 @@ publish content.
 3. While in your new GitHub repo, use **Settings > Collaborators & teams** to
    add **Admin** access to the repo for the **ix-tools** team so that they
    can provide assistance as needed.
-4. Fork the [docs-starter-kit
+4. Fork your GitHub repo to create your own copy of it.
+5. Clone your fork to your local computer.
+6. Fork the [docs-starter-kit
    repo](https://github.rackspace.com/IX/sandbox-docs-starter-kit) to create
    your own copy of it.
-5. Clone your fork of the docs-starter-kit repo to your local computer.
-6. Copy files from your local copy of docs-starter-kit into the local
+7. Clone your fork of the docs-starter-kit repo to your local computer.
+8. Copy files from your local copy of docs-starter-kit into the local
    copy of your repo.
-7. Set up builds for publishing your documentation:
+9. Set up builds for publishing your documentation:
    - Instructions for internal documents are in the
      [tools-internal-repo
      folder](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/tools-internal-repo).
    - Instructions for external documents are in the
      [tools-external-repo
      folder](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/external-repo/tools-external-repo).
-8. Ensure that your content builds locally without errors or
+10. Ensure that your content builds locally without errors or
     warnings. Ensure that the generated content looks like you expect
     by opening the HTML files in your browser.
-9. Determine the date by which your content must be published.
+11. Determine the date by which your content must be published.
     Contact the InfoDev Tools Team *well in advance* of this
     publication date. We recommend that you start working with them a
     month in advance of the date of first publication. At minimum,

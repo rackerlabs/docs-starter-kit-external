@@ -1,6 +1,8 @@
 # External tools
 
-The tools in the `sandbox-docs-starter-kit/external-repo/tools-external-repo` directory are are for use with GitHub.com (rackerlabs) for external documentation.
+The tools in the `sandbox-docs-starter-kit/external-repo/tools-external-repo` directory are for use
+with GitHub.com (rackerlabs) for external documentation. The tools set up publishing for documents
+that are to be available external to Rackspace.
 
 The external documentation system is deconst, an open-source end-to-end documentation delivery system built by a
 former Racker. Deconst deploys to two Rackspace sites,
@@ -59,8 +61,6 @@ account invitation to that repo.
 ### Customize the configuration files
 
 The configuration files contain placeholders and variable that must be updated to display the correct values.
-
-#### Sphinx-RST-based
 
 #### Sphinx-RST-based (if your content is written in RST)
 

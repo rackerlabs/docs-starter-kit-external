@@ -229,3 +229,91 @@ uses unique terms, abbreviations, or non-typical names, add them to
             [My RAML 1](my-raml-1.html)
             [My RAML 2](my-raml-2.html)
             [My RAML 3](my-raml-3.html)
+
+## Add publications to the internal docs landing page
+
+When you are ready to publish your documentation on the [internal docs landing page](https://pages.github.rackspace.com/IX/internal-docs-landing-page/), you need to add information to the [index.html file](https://github.rackspace.com/IX/internal-docs-landing-page/blob/master/index.html) in the [internal-docs-landing-page repository](https://github.rackspace.com/IX/internal-docs-landing-page).
+
+### Add a new section, product, and document
+
+To add a new section, product, and documents to the index.rst file, follow these steps:
+
+1. Determine where the section needs to be placed in on the landing page.
+
+2. Add lines similar to those that follow to the index.html file in the
+   location based on your determination in step 1.
+
+    ```
+        <section class="docs-category design">
+          <h2>REACH Control Panel Services</h2>
+          <p> </p>
+          <div class="product-list">
+            <div class="product">
+              <div class="card crimson">
+                <div class="card-content">
+                  <div class="card-title">
+                    <h4 id="reach-documentation">REACH Control Panel</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li>
+                        <a href="https://one.rackspace.com/display/reach/Rackspace+Cloud+Control+Panel+-+Reach">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="https://one.rackspace.com/pages/viewrecentblogposts.action?key=atlas">Release Notes</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </section>
+    ```
+
+### Add a new product with a new document
+
+To add a new product and a new document to an existing section on the landing page, such as adding the **Rackspace Servers** section for a new *Cloud Servers Admin API Guide* in the existing **Rackspace Public Cloud API Services** section, follow these steps:
+
+1. Determine where the new product needs to be placed in the existing section
+   on the landing page.
+
+2. Add lines similar to those that follow to the index.html file in the
+   location based on your determination in step 1.
+
+    ```
+    <div class="product">
+      <div class="card crimson">
+        <div class="card-content">
+          <div class="card-title">
+            <h4 id="internal-docs-servers">Rackspace Servers V2</h4>
+          </div>
+          <div class="card-body">
+            <div class="list">
+              <div class="list-column">
+                <ul>
+                  <li>
+                    <a href="//pages.github.rackspace.com/IX/internal-docs-cloud-servers/">Cloud Servers v2 Admin API Developer Guide</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    ```
+
+### Add a new document to an existing product
+
+To add a new document to an existing product, add a list item (``li``) to the
+unordered list (``ul``) under ``div class="list-column"`` for the product. For
+example, to add the *Cloud Servers Admin API Guide* to the existing
+**Rackspace Servers V2** product, add lines similar to the
+following to the  of the index.html file:
+
+   ```
+   <li>
+    <a href="//pages.github.rackspace.com/IX/internal-docs-cloud-servers/">Cloud Servers Admin API Guide</a>
+   </li>
+   ```
