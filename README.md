@@ -1,4 +1,30 @@
-# Welcome to the docs-starter-kit repo!
+
+# Welcome to docs-starter-kit v2.0 repo!
+
+This repository (repo) contains templates and instructions to help you set
+up your own documentation repo. The README files provide instructions about
+how to copy the repo, use it to create your own content, and publish that
+content.
+
+## What changed in docs-starter-kit v2.0
+
+The following high-level changes are included:
+
+- Templates build a viewable HTML doc.
+- Users can copy an existing buildable RST directory structure.
+- Infodev can test new/existing templates using tox or the preview link.
+
+This release creates a buildable RST project (changes):
+
+- Added docs folder.
+- Moved user guide and API templates into docs folder to support products that have both docs.
+- Moved RST build files to correct build locations.
+- Deleted RST build file folders (internal and external). 
+– RST build files should now be updated in build locations.
+- Added external-repo folder that has correct directory structure to build external RST projects.
+- Updated build procedures (readme files).
+
+## Getting started
 
 Before you can create a documentation repo, you have to determine who your
 audience is and what kind of content you need to produce for them.
