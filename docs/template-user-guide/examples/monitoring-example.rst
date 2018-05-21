@@ -4,10 +4,11 @@
 Monitoring (example)
 ====================
 
-AWS CloudWatch is the primary monitoring system used by our Fanatical Support
-for AWS support teams. CloudWatch provides a wide variety of metrics that cover
-the entire suite of AWS services, from CPU utilization and disk I/O on EC2
-instances to network throughput of ELB load balancers.
+AWS CloudWatch is the primary monitoring system used by our
+**Fanatical Support**\® for AWS support teams. CloudWatch provides a wide
+variety of metrics that cover the entire suite of AWS services, from CPU
+utilization and disk I/O on EC2 instances to network throughput of ELB load
+balancers.
 
 Although AWS CloudWatch is available to Fanatical Support for AWS accounts at
 all service levels, customers using our Aviator service level can opt to have
