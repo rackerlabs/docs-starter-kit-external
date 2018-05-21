@@ -1,52 +1,8 @@
+# External docs
 
-# Welcome to docs-starter-kit v2.0 repo!
+Before you can create a documentation repo, you have to determine what kind of content you need to produce for them.
 
-This repository (repo) contains templates and instructions to help you set
-up your own documentation repo. The README files provide instructions about
-how to copy the repo, use it to create your own content, and publish that
-content.
-
-## What changed in docs-starter-kit v2.0
-
-The following high-level changes are included:
-
-- Templates build a viewable HTML doc.
-- Users can copy an existing buildable RST directory structure.
-- Infodev can test new/existing templates using tox or the preview link.
-
-This release creates a buildable RST project (changes):
-
-- Added docs folder.
-- Moved user guide and API templates into docs folder to support products that have both docs.
-- Moved RST build files to correct build locations.
-- Deleted RST build file folders (internal and external). 
-– RST build files should now be updated in build locations.
-- Added external-repo folder that has correct directory structure to build external RST projects.
-- Updated build procedures (readme files).
-
-## Getting started
-
-Before you can create a documentation repo, you have to determine who your
-audience is and what kind of content you need to produce for them.
-
-1. Is your documentation for Rackers only, or is it customer facing?
-
-   - If the content is for Rackers only, you should create an
-     *internal* repo. Repos for internal content are in GitHub
-     Enterprise at https://github.rackspace.com/IX/. Internal content
-     is published on the [internal docs landing
-     page](https://pages.github.rackspace.com/IX/internal-docs-landing-page/).
-
-   - If the content is customer facing, you should create an
-     *external* repo. Repos for external content are in GitHub at
-     https://github.com/rackerlabs/. These repos generally have names
-     that begin with docs (for example,
-     https://github.com/rackerlabs/docs-cloud-load-balancers).
-     External documentation is published on the [external docs landing
-     page](https://developer.rackspace.com/docs/) or on the [Support
-     site](https://support.rackspace.com/how-to/).
-
-2. What type of documentation are you creating?
+1. What type of documentation are you creating?
 
    - **API content**: The repo has
      [templates](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/docs/template-api-guide)
@@ -87,10 +43,7 @@ started with GitHub and authoring:
 Set up your repo with all the necessary files and prepare it to
 publish content.
 
-1. Log in to the appropriate GitHub site for the kind of content that you need
-   to create:
-   - Internal content: https://github.rackspace.com/IX/
-   - External content: https://github.com/rackerlabs/
+1. Log in to GitHub site - external content: https://github.com/rackerlabs/
 2. Create your own GitHub documentation repo.
 3. While in your new GitHub repo, use **Settings > Collaborators & teams** to
    add **Admin** access to the repo for the **ix-tools** team so that they
@@ -101,13 +54,8 @@ publish content.
 5. Clone your fork of the docs-starter-kit repo to your local computer.
 6. Copy files from your local copy of docs-starter-kit into the local
    copy of your repo.
-7. Set up builds for publishing your documentation:
-   - Instructions for internal documents are in the
-     [tools-internal-repo
-     folder](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/tools-internal-repo).
-   - Instructions for external documents are in the
-     [tools-external-repo
-     folder](https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/external-repo/tools-external-repo).
+7. Set up external builds for publishing your documentation, see the
+   https://github.rackspace.com/IX/sandbox-docs-starter-kit/tree/master/external-repo/tools-external-repo/readme.md).
 8. Ensure that your content builds locally without errors or
     warnings. Ensure that the generated content looks like you expect
     by opening the HTML files in your browser.
@@ -151,8 +99,7 @@ build it.
 8.	Request reviews of your PR from the Information Development team in the
     ``#docs`` channel in Slack.
 9.	After all review comments have been addressed, you can merge your
-    PR, which automatically starts the documentation build, and when
-    properly linked to a landing page,
+    PR, which automatically starts the documentation build and
     publishes the documentation either on the [internal docs landing
     page](https://pages.github.rackspace.com/IX/internal-docs-landing-page/)
     or the [external docs landing
