@@ -18,7 +18,7 @@ serviceFault
 
 The ``serviceFault``, and by extension all other faults, includes ``message``
 and ``details``  elements that contain strings that describe the nature of
-the fault. It also contain a ``code``  attribute that represents the HTTP
+the fault. It also contains a ``code``  attribute that represents the HTTP
 response code. The ``code`` attribute of the fault is for  the convenience of
 the caller, who can retrieve the response code from the HTTP response headers
 or directly from the fault object. Note that the ``serviceFault`` is not

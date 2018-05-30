@@ -16,7 +16,7 @@ To get this information, log in to the
 
 -  Your account username is the username that you use to log in.
 
--  To get your account number, click the **username** menu in the top-right
+-  To get your account number, click the **ACCOUNT** menu near the top-right
    corner of the control panel. The account number is shown at the top of the
    menu.
 

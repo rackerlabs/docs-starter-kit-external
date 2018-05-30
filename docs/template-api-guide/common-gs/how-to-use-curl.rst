@@ -3,10 +3,10 @@
 cURL is a command-line tool that you can use to interact with REST interfaces.
 cURL lets you transmit and receive HTTP requests and responses from the command
 line or a shell script, which enables you to work with the API directly. cURL
-is available for Linux distributions, Mac OS® X, and Microsoft Windows®. For
+is available for Linux® distributions, Mac OS X®, and Microsoft Windows®. For
 information about cURL, see `http://curl.haxx.se/ <http://curl.haxx.se/>`__.
 
-To run the cURL request examples shown in this guide on Mac OS® X or another
+To run the cURL request examples shown in this guide on Mac OS X or another
 Linux-based operating system, you should be able to copy each example directly
 to the command line or a script.
 
