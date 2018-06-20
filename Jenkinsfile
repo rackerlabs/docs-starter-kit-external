@@ -11,6 +11,18 @@
 // Pipeline variables
 def isPR=false
 
+// define github credentialsId
+def credentialId=''
+
+// define org/user name
+def orgName=""
+
+// define repository name
+def repoName=""
+
+// create the repoURL based on the org/repo Names
+def repoURL="git@github.rackspace.com:${orgName}/${repoName}.git"
+
 // Staging post
 def notifyGitHub(text) {
   println BUILD_URL
@@ -18,7 +30,7 @@ def notifyGitHub(text) {
     script: "echo ${BRANCH_NAME} | cut -d '-' -f '2'",
     returnStdout: true
   ).trim()
-  def startIt='https://github.rackspace.com/api/v3/repos/<orgNameOrUsername>/<repoName>/issues/'
+  def startIt="https://github.rackspace.com/api/v3/repos/${orgName}/${repoName}/issues/"
   def startURL="${startIt}${numberPR}"
   println startURL
   def startOfEnd='/comments --data \'{"body":"'
@@ -54,11 +66,11 @@ node {
       // Checkout behavior explicit definition because the plugin downloads
       // things differently depending on what it's looking at.
       if (isPR) {
-        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: 'githubSvc', url: 'ssh://git@github.rackspace.com/<orgNameOrUsername>/<repoName>.git']]]
+        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: credentialId, url: repoURL]]]
         sh "git fetch origin pull/'${numberPR}'/head:'${BRANCH_NAME}'"
         sh "git checkout '${BRANCH_NAME}'"
       } else {
-        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: 'githubSvc', url: 'git@github.rackspace.com:<orgNameOrUsername>/<repoName>.git']]]
+        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: credentialId, url: repoURL]]]
         sh 'git checkout master'
       }
       sh 'git branch -t gh-pages origin/gh-pages'
@@ -82,7 +94,7 @@ node {
       stage ('Build') {
         echo "building..."
         println currentBuild.result
-        sshagent (credentials: ['githubSvc']) {
+        sshagent (credentials: [credentialId]) {
           sh 'cd $WORKSPACE'
           sh '$WORKSPACE/build.sh'
         }
@@ -91,7 +103,7 @@ node {
         println env.WORKSPACE
         println env.BRANCH_NAME
         sh 'cd $WORKSPACE'
-        sshagent (credentials: ['githubSvc']) {
+        sshagent (credentials: [credentialId]) {
           sh 'cd $WORKSPACE'
           sh '$WORKSPACE/publish.sh'
         }
