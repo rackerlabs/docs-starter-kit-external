@@ -7,7 +7,7 @@ Product overview
 .. Define |product name| in conf.py
 
 Include introductory and conceptual information about the product,
-such as architrecture, features, components, and system requirements.
+such as architecture, features, components, and system requirements.
 
 This section describes the features, architecture, and components of
 the |product name| product.

@@ -59,7 +59,7 @@ catalog, see
 
   .. note::
 
-     ServiceNet is an internal Rackspace only, multitenant network connection
+     ServiceNet is an internal Rackspace only, multi-tenant network connection
      within each Rackspace data center. ServiceNet IP addresses are not
      accessible via the public Internet. Rackspace customers can configure
      resources to use an internal IP address so that traffic over the

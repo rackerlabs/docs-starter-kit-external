@@ -10,9 +10,7 @@ List images
 Lists public virtual machine (VM) images.
 
 This operation returns images you created, shared images that you accepted, and
-standard images. For more information about standard images, see
-:ref:`Standard images <standard-images>`. The response conforms to the schema
-found in :ref:`Get images schema <get-images-schema-schemas-images>`.
+standard images.
 
 This operation returns a subset of the larger collection of images and a link
 that you can use to get the next set of images. Always check for the presence
@@ -127,8 +125,7 @@ The request has the following body parameters.
      - The name of the image.
    * - images.\ **status**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
+     - The status of the image.
    * - images.\ **visibility**
      - String
      - Specifies image visibility as ``public``, ``private``, or ``shared``.

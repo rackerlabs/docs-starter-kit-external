@@ -12,7 +12,7 @@ balancers.
 
 Although AWS CloudWatch is available to Fanatical Support for AWS accounts at
 all service levels, customers using our Aviator service level can opt to have
-Rackespace Support respond to unexpected deviations in metrics. Watchman is the
+Rackspace Support respond to unexpected deviations in metrics. Watchman is the
 system responsible for receiving CloudWatch alarms and creating tickets on your
 Rackspace account.
 

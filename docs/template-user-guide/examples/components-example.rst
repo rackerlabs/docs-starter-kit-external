@@ -79,7 +79,7 @@ these services if you have selected any of the add-on components listed.
        performing capacity planning, and proactively eliminating performance
        bottlenecks. It is accessible via a web interface.
    * - vRealize Automation™ virtual appliance and IaaS server
-     - The vRealize Automation virtual appliance and IaaS server arei included
+     - The vRealize Automation virtual appliance and IaaS server are included
        if your RPC-VMware cloud includes the vRealize Automation add-on
        feature. The vRealize Automation add-on feature provides cloud
        automation, such as the ability to provide VMs and applications as
