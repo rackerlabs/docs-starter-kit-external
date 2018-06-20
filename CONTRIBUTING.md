@@ -20,7 +20,7 @@ to create their own documentation repo.
    [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 For more information about the contents of this repo and how to get started,
-see the [Docs Starter Kit User Guide] (https://pages.github.rackspace.com/IX/writers-handbook/).
+see the [Docs Starter Kit User Guide] (https://pages.github.rackspace.com/IX/docs-starter-kit-user-guide).
 
 ## Updating and adding content
 
