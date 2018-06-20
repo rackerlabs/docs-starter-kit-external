@@ -1,4 +1,4 @@
-.. _api-docs-index:
+.. _docs-index:
 
 ================
 |service| Guides
