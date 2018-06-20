@@ -15,10 +15,10 @@ def isPR=false
 def credentialId=''
 
 // define org/user name
-def orgName=""
+def orgName="IX"
 
 // define repository name
-def repoName=""
+def repoName="sandbox-docs-starter-kit"
 
 // create the repoURL based on the org/repo Names
 def repoURL="git@github.rackspace.com:${orgName}/${repoName}.git"
