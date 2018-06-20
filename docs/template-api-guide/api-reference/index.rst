@@ -4,16 +4,14 @@
 API reference
 =============
 
-Learn about the available |apiservice| resources and operations, and
+Learn about the following |apiservice| resources and operations, and
 see request and response examples. You can use the |apiservice| operations
 to interact directly with the service.
 
 .. note::
 
      You can also perform operations by using the
-     :rax-devdocs:`Rackspace Command Line Interface (rack CLI) <#sdks>`, one
-     of the language-specific :rax-devdocs:`software development kits <#sdks>`,
-     or the `Cloud Control Panel <https://mycloud.rackspace.com/>`_.
+     the `Cloud Control Panel <https://mycloud.rackspace.com/>`_.
 
 .. COMMENT: Group your api methods into logical categories, usually by
    the resource in the method URL.  Use the resource-one-methods.rst file as

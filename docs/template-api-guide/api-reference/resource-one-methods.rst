@@ -4,7 +4,7 @@
 Resource name topic example
 ===========================
 
-Use the <resource name> API operations to
+Use the following <resource name> API operations to
 \[insert a description of the resource here\].
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.

@@ -80,7 +80,7 @@ Rackspace, the furnishing of this document does not give you any
 license to patents, trademarks, copyrights, or other intellectual
 property.
 
-Rackspace, Rackspace logo, and Fanatical Support®, are registered
+Rackspace, Rackspace logo, and **Fanatical Support**\®, are registered
 trademarks or trademarks of Rackspace US, Inc. in the United States
 and/or other countries.
 

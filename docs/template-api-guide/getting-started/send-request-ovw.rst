@@ -11,8 +11,6 @@ This section shows how to send requests by using cURL.
      methods:
 
      -  If you are developing applications or automation, try using
-        :rax-devdocs:`Rackspace SDKs <#sdks>`, the
-        :rax-devdocs:`Rackspace CLI <rack-cli>`, or
         `OpenStack client applications`_.
 
      -  For API development, testing and workflow management in a graphical

@@ -25,9 +25,7 @@ The following table describes the top features of Rackspace CDN:
        get your site up and running.
    * - Multiple interface options
      - Rackspace CDN is fully supported via the Rackspace Cloud Control Panel.
-       You can also interact with Rackspace CDN via our REST API or one of our
-       software development kits (SDK) in Ruby, PHP, Java, node.js, Python, or
-       .NET.
+       You can also interact with Rackspace CDN via our REST API.
    * - Whole site delivery and acceleration
      - Rackspace CDN does more than just accelerate individual objects in
        storage. Using origin-pull technology and DNS, you can identify your
