@@ -36,6 +36,7 @@ Feldstein
 Fibre
 Filebeat
 Filesystem
+Firefox
 Galera
 GbE
 Gbps
@@ -45,6 +46,7 @@ Gitlab
 Hadoop
 Hashicorp
 Helpdesk
+Hong
 Hortonworks
 Hypervisors
 IM
@@ -59,6 +61,7 @@ KVM
 Kibana
 LBaaS
 Libvirt
+Login
 Logstash
 MaaS
 Maas
@@ -117,6 +120,7 @@ Scalable
 Sep
 Sept
 Sharding
+Startup
 Supermicro
 Tahr
 Terraform
@@ -184,6 +188,7 @@ cgroups
 changeset
 chargeback
 chatops
+checksum
 chk
 chroot
 cinderclient
@@ -301,6 +306,7 @@ loadBalancerFault
 localhost
 locators
 logstash
+login
 lon
 lvm
 lxc
@@ -417,6 +423,7 @@ reindexes
 reindexing
 reregistered
 reregistering
+resizes
 remediating
 reorderings
 repl
@@ -458,6 +465,7 @@ ss
 ssd
 ssl
 standup
+startup
 subdirectories
 subinterface
 submodules
