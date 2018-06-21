@@ -46,4 +46,4 @@ the |product name| service REST API:
    release-notes/index
    service-updates
    additional-resources
-   copyright
+   disclaimer
