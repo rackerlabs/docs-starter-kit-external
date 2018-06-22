@@ -12,10 +12,9 @@ All configuration values have a default; values that are commented out
 serve to show the default.
 """
 
-# import sys
+import sys
 import os
-import re
-import sphinx
+# import re
 
 try:
     import sphinx_rtd_theme
@@ -24,9 +23,8 @@ except ImportError:
 
 try:
     from sphinxcontrib import spelling
-except:
+except ImportError:
     spelling = None
-
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -57,7 +55,23 @@ if spelling is not None:
 # templates_path = ['_templates']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = ['.rst']
+
+# Add Markdown support
+try:
+    from recommonmark.parser import CommonMarkParser
+    source_suffix.append('.md')
+    source_parsers = {
+        '.md': CommonMarkParser,
+    }
+except ImportError:
+    sys.stdout.write('''
+                     *************************************
+                     Unable to import CommonMarkParser.
+                     Markdown support will not be enabled.
+                     *************************************
+
+                     ''')
 
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
@@ -95,18 +109,16 @@ copyright = '<year>, Rackspace'
 #
 
 # The short X.Y version.
-version = sphinx.__released__
+version = "1.0"
 
 # The full version, including alpha/beta/rc tags.
-release = version
+release = "version"
 
 # Global variables that are replaced by the specified value during the build
 # process.
-
 rst_epilog = """
 .. |service| replace:: <officialProjectName>
-.. |apiservice| replace:: <officialProjectName API>
-.. |no changes| replace:: None for this release
+.. |api-service| replace:: <officialProjectName API>
 .. |contract version| replace:: <version>
 .. |product name| replace:: <PRODUCT NAME>
 """
@@ -134,10 +146,7 @@ scv_grm_exclude = ('.nojekyll', '.gitignore')
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'samples', 'README.rst',
-                    'api-reference/methods/*',
-                    'common-gs', 'getting-started/examples/*',
-                    'release-notes/releases/*']
+exclude_patterns = ['_build', 'samples', 'README.rst', 'README.md']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -212,7 +221,8 @@ else:
 html_title = '<projectName> v<release> documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = '<projectName> v<release> API'
+# html_short_title = None
+html_short_title = '<projectName> v<release>'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -226,7 +236,15 @@ html_short_title = '<projectName> v<release> API'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
+html_static_path = ['_static']
+
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # overrides wide tables in RTD theme
+        '_static/bespoke.css',  # custom CSS styling
+        '_static/bolditalic.css',  # bolditalic styling
+        ],
+    }
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -290,88 +308,3 @@ htmlhelp_basename = 'docs-<product-name>'
 
 # this will change the 'paragraph' character to '#'
 html_add_permalinks = '#'
-
-# -- Options for LaTeX output ---------------------------------------------
-
-# latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-# 'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-# 'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-# 'preamble': '',
-
-# Latex figure (float) alignment
-# 'figure_align': 'htbp',
-# }
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-  (master_doc, 'docs-<product-name>.tex',
-   'Rackspace <productName> API Guide',
-   'Rackspace', 'manual'),
-]
-
-# The name of an image file (relative to this directory) to place at the top of
-# the title page.
-# latex_logo = None
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-# latex_use_parts = False
-
-# If true, show page references after internal links.
-# latex_show_pagerefs = False
-
-# If true, show URL addresses after external links.
-# latex_show_urls = False
-
-# Documents to append as an appendix to all manuals.
-# latex_appendices = []
-
-# If false, no module index is generated.
-# latex_domain_indices = True
-
-
-# -- Options for manual page output ---------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'Rackspace <productName> API documentation',
-     'Rackspace developer documentation',
-     'Rackspace', 1)
-]
-
-# If true, show URL addresses after external links.
-# man_show_urls = False
-
-
-# -- Options for Texinfo output -------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-  (master_doc, 'docs-<product-name>',
-   'Rackspace <productName> API Documentation',
-   'Rackspace', 'docs-<product-name>',
-   'Learn about using the <officialProjectName',
-   'Miscellaneous'),
-]
-
-# Documents to append as an appendix to all manuals.
-# texinfo_appendices = []
-
-# If false, no module index is generated.
-# texinfo_domain_indices = True
-
-# How to display URL addresses: 'footnote', 'no', or 'inline'.
-# texinfo_show_urls = 'footnote'
-
-# If true, do not generate a @detailmenu in the "Top" node's menu.
-# texinfo_no_detailmenu = False
