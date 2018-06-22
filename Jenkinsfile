@@ -11,8 +11,11 @@
 // Pipeline variables
 def isPR=false
 
-// define github credentialsId
-def credentialId=''
+// define github credentials secret name from Jenkins for HTTPS connections
+def secretHttpName='SVCwPAT'
+
+// define github credentials secret name from Jenkins for SSH connections
+def secretSshName='githubSvc'
 
 // define org/user name
 def orgName="IX"
@@ -24,13 +27,13 @@ def repoName="sandbox-docs-starter-kit"
 def repoURL="git@github.rackspace.com:${orgName}/${repoName}.git"
 
 // Staging post
-def notifyGitHub(text) {
+def notifyGitHub(text, org, repo, creds) {
   println BUILD_URL
   def numberPR=sh (
     script: "echo ${BRANCH_NAME} | cut -d '-' -f '2'",
     returnStdout: true
   ).trim()
-  def startIt="https://github.rackspace.com/api/v3/repos/${orgName}/${repoName}/issues/"
+  def startIt="https://github.rackspace.com/api/v3/repos/${org}/${repo}/issues/"
   def startURL="${startIt}${numberPR}"
   println startURL
   def startOfEnd='/comments --data \'{"body":"'
@@ -39,7 +42,7 @@ def notifyGitHub(text) {
   println endURL
   def urlCurlIt="${startURL}${endURL}"
   println urlCurlIt
-  withCredentials([usernameColonPassword(credentialsId: 'SVCwPAT', variable: 'MY_CREDS')]) {
+  withCredentials([usernameColonPassword(credentialsId: "${creds}", variable: 'MY_CREDS')]) {
     sh "curl -u ${MY_CREDS} -X POST ${urlCurlIt}"
   }
 }
@@ -66,18 +69,18 @@ node {
       // Checkout behavior explicit definition because the plugin downloads
       // things differently depending on what it's looking at.
       if (isPR) {
-        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: credentialId, url: repoURL]]]
+        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: secretSshName, url: repoURL]]]
         sh "git fetch origin pull/'${numberPR}'/head:'${BRANCH_NAME}'"
         sh "git checkout '${BRANCH_NAME}'"
       } else {
-        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: credentialId, url: repoURL]]]
+        checkout scm:[$class: 'GitSCM', userRemoteConfigs: [[credentialsId: secretSshName, url: repoURL]]]
         sh 'git checkout master'
       }
       sh 'git branch -t gh-pages origin/gh-pages'
       echo "branches are..."
       sh 'git branch -vv'
       echo "testing..."
-      sshagent (credentials: ['githubSvc']) {
+      sshagent (credentials: [secretSshName]) {
         env.WORKSPACE = pwd()
         sh 'cd $WORKSPACE'
         sh '$WORKSPACE/test.sh'
@@ -87,14 +90,14 @@ node {
     if (isPR) {
       stage ('Stage') {
         echo "staging..."
-        notifyGitHub("Staging at " + BUILD_URL + "execution/node/5/ws/docs/_build/html/index.html")
+        notifyGitHub("Staging at " + BUILD_URL + "execution/node/5/ws/docs/_build/html/index.html", orgName, repoName, secretHttpName)
       }
       echo "it was a PR, so ending here"
     } else {
       stage ('Build') {
         echo "building..."
         println currentBuild.result
-        sshagent (credentials: [credentialId]) {
+        sshagent (credentials: [secretSshName]) {
           sh 'cd $WORKSPACE'
           sh '$WORKSPACE/build.sh'
         }
@@ -103,7 +106,7 @@ node {
         println env.WORKSPACE
         println env.BRANCH_NAME
         sh 'cd $WORKSPACE'
-        sshagent (credentials: [credentialId]) {
+        sshagent (credentials: [secretSshName]) {
           sh 'cd $WORKSPACE'
           sh '$WORKSPACE/publish.sh'
         }
