@@ -1,6 +1,6 @@
 {
-  "contentIDBase": "https://github.com/rackerlabs/docs-SDP/",
-  "githubUrl": "https://github.com/rackerlabs/docs-SDP/",
+  "contentIDBase": "https://github.com/<repoName>/<version>/",
+  "githubUrl": "https://github.com/rackerlabs/<reponame>/",
   "githubBranch": "master",
   "meta": {
     "preferGithubIssues": true
