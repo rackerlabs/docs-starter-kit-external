@@ -24,7 +24,7 @@ products and accepts no responsibility for third-party products.
 Except as expressly provided in any written license agreement from
 Rackspace, the furnishing of this document does not give you any license
 to patents, trademarks, copyrights, or other intellectual property.
-Rackspace®, the Rackspace logo, and Fanatical Support® are registered
+Rackspace®, the Rackspace logo, and **Fanatical Support®** are registered
 service marks of Rackspace US, Inc. All other third-party product
 names and trademarks used in this document do not imply endorsement
 or sponsorship of Rackspace by those third-parties and are used
