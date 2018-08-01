@@ -21,7 +21,7 @@ def secretSshName='githubSvc'
 def orgName="IX"
 
 // define repository name
-def repoName="sandbox-docs-starter-kit"
+def repoName="docs-starter-kit"
 
 // create the repoURL based on the org/repo Names
 def repoURL="git@github.rackspace.com:${orgName}/${repoName}.git"
