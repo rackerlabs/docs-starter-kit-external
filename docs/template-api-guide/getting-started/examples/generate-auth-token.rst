@@ -36,7 +36,7 @@ with their respective values:
    #. Copy the value of the API Key and paste it into a text editor of
       your choice.
 
-   #. Click Hide to hide the value of the API Key. 
+   #. Click Hide to hide the value of the API Key.
 
    You also need your cloud account number. In the documentation, the
    account number is often referred to as your tenant name or tenant ID

@@ -13,3 +13,4 @@ This file displays the following |service| Guides.
 
    ../template-user-guide/index.rst
    ../template-api-guide/index.rst
+   ../template-simple-project/index.rst

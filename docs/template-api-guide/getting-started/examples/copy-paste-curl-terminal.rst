@@ -26,11 +26,11 @@ Token* <ch04.xhtml>`__:
 
     curl -i -d \
     '<?xml version="1.0" encoding="UTF-8"?>
-     <auth>   
-        <apiKeyCredentials     
+     <auth>
+        <apiKeyCredentials
             xmlns="http://docs.rackspace.com/identity/api/ext/RAX-KSKEY/v1.0"
-            username="your_username"     
-            apiKey="your_api_key"/>   
+            username="your_username"
+            apiKey="your_api_key"/>
      </auth>' \
     'https://identity.api.rackspacecloud.com/v2.0/tokens'
 
@@ -42,13 +42,13 @@ continues on the next line:
 
     curl -i -d \
 
-       
+
     (... lines within the xml portion of the message are not shown in this
     example)
-    (... the example only shows lines that are part of cURL syntax)     
-         
-        
-       
+    (... the example only shows lines that are part of cURL syntax)
+
+
+
      </auth>' \
     'https://identity.api.rackspacecloud.com/v2.0/tokens'
 
@@ -59,11 +59,11 @@ processing:
 .. code::
 
     '<?xml version="1.0" encoding="UTF-8"?>
-     <auth>   
-        <apiKeyCredentials     
+     <auth>
+        <apiKeyCredentials
             xmlns="http://docs.rackspace.com/identity/api/ext/RAX-KSKEY/v1.0"
-            username="your_username"     
-            apiKey="your_api_key"/>   
+            username="your_username"
+            apiKey="your_api_key"/>
      </auth>' \
 
 .. note::
