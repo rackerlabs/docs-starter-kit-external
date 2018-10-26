@@ -23,20 +23,22 @@ with their respective values:
 
    **To find your API Key:**
 
-   #. Log in to the Cloud Control Panel (https://mycloud.rackspace.com).
+   #. Log in to the Cloud Control Panel (https://login.rackspace.com).
+
+   #. In the top navigation bar, click **Select a Product > Rackspace Cloud**.
 
    #. On the upper-right side of the top navigation pane, click your
       username.
 
-   #. From the menu, select Account Settings.
+   #. From the menu, select **My Profile & Settings**.
 
-   #. In the Login Details section of the Account Settings page, locate
-      the API Key field and click Show.
+   #. In the **Security Settings** section of the Account Settings page, locate
+      the API Key field and click **Show**.
 
    #. Copy the value of the API Key and paste it into a text editor of
       your choice.
 
-   #. Click Hide to hide the value of the API Key.
+   #. Click **Hide** to hide the value of the API Key.
 
    You also need your cloud account number. In the documentation, the
    account number is often referred to as your tenant name or tenant ID
@@ -45,9 +47,8 @@ with their respective values:
    your API Key, and your tenant ID or cloud account number—form the
    authentication credentials that are required to connect to the
    Rackspace cloud. To find your tenant ID or cloud account number,
-   locate your username on the upper-right side of the top navigation
-   pane in the Cloud Control Panel. Click your username to display the
-   menu. The tenant ID or account number is the first item in the menu.
+   click *Account* in the top navigation pane in the Cloud Control Panel.
+   The tenant ID or account number is the first item in the menu.
 
 Use the following endpoint to access the Authentication Service,
 regardless of US or UK identities:

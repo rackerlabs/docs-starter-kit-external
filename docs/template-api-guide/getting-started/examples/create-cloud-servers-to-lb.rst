@@ -15,12 +15,12 @@ existing cloud servers) to set up as nodes for your load balancer.
    If you are using cloud servers that already exist in your account,
    skip to the last step in the following procedure.
 
-#. Log in to the `Cloud Control Panel <http://mycloud.rackspace.com/>`__.
+#. Log in to the `Cloud Control Panel <https://login.rackspace.com/>`_.
 
    .. note::
       You can also create a cloud server by using the Cloud Servers API. For
       details, see the
-      `Cloud Servers API guide <http://developer.rackspace.com/>`__.
+      `Cloud Servers API guide <http://developer.rackspace.com/>`_.
 
 #. At the top of the page, click **Servers > Cloud Servers**.
 

@@ -6,7 +6,7 @@ Accessing the dashboard (example)
 
 To use Rackspace Intelligence, you must have a `Rackspace Cloud
 account <https://cart.rackspace.com/cloud>`_ and you must be logged in to
-the `Cloud Control Panel <https://mycloud.rackspace.com/>`_ for that
+the `Cloud Control Panel <https://login.rackspace.com>`_ for that
 account. Rackspace Intelligence has no separate login process.
 
 Access Rackspace Intelligence

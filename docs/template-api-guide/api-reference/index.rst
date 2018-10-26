@@ -11,7 +11,7 @@ to interact directly with the service.
 .. note::
 
      You can also perform operations by using the
-     the `Cloud Control Panel <https://mycloud.rackspace.com/>`_.
+     the `Cloud Control Panel <https://login.rackspace.com/>`_.
 
 .. COMMENT: Group your api methods into logical categories, usually by
    the resource in the method URL.  Use the resource-one-methods.rst file as

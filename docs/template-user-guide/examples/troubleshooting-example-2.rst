@@ -137,17 +137,17 @@ you need to test the site’s connectivity by using the console of the cloud
 server that hosts the site. To access the server's console, perform the
 following steps:
 
-1. Log in to the `Cloud Control Panel <https://mycloud.rackspace.com/>`_.
+1. Log in to the `Cloud Control Panel <https://login.rackspace.com/>`_.
 
-2. Select **Servers > Cloud Servers**.
+#. Select **Servers > Cloud Servers**.
 
-3. Click the gear icon next to the name of the server that hosts your website
+#. Click the gear icon next to the name of the server that hosts your website
    and select **Emergency Console**.
 
    Use one of the following steps to test the server's connectivity with the
    console.
 
-4. *(Linux)* Press **Enter** to see if the server is responsive during the
+#. *(Linux)* Press **Enter** to see if the server is responsive during the
    login process.
 
    - If the server is responsive, you should see the following login prompts
@@ -172,7 +172,7 @@ following steps:
      If the ``Out of memory`` error occurs again, determine whether you need
      to resize the server or change the configuration for scalability.
 
-5. *(Windows)* Press **Ctrl+Alt+Del** to see if the server prompts you to log
+#. *(Windows)* Press **Ctrl+Alt+Del** to see if the server prompts you to log
    in.
 
    - If you are prompted to log in, the server is powered on and active. Your

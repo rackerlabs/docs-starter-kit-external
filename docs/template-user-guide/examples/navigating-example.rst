@@ -4,7 +4,7 @@
 Navigating (example)
 ====================
 
-The `Cloud Control Panel <https://mycloud.rackspace.com>`_ enables you to
+The `Cloud Control Panel <https://login.rackspace.com/>`_ enables you to
 manage your Rackspace Cloud infrastructure through a simple and intuitive
 interface. This article describes how to navigate and use some of the features
 of the control panel.
