@@ -13,8 +13,7 @@ Now Rackspace Cloud Networks has been released using the OpenStack Neutron API
 that you use the Neutron API operations even though the Nova-Network API
 operations still work.
 
-To report issues related to these changes, submit feedback in the Rackspace
-Community or contact Rackspace Support.
+To report issues related to these changes, contact Rackspace Support.
 
 What's new
 ----------
