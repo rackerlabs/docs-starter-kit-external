@@ -17,14 +17,14 @@ can use GitHub Desktop or another GitHub GUI instead to accomplish the steps.
 2. Use the SSH URL for the forked repo to clone it to your local system:
 
     ```
-    git clone git@github.rackspace.com:my-github-username/docs-starter-kit.git
+    git clone git@github.rackspace.com:my-github-username/docs-starter-kit-external.git
     ```
 
 3. Track the upstream repo:
 
     ```
     cd docs-starter-kit
-    git remote add --track master upstream git@github.rackspace.com:IX/docs-starter-kit.git
+    git remote add --track master upstream git@github.rackspace.com:IX/docs-starter-kit-external.git
     ```
     Start new changes with the following steps.
 
