@@ -1,16 +1,15 @@
-.. _docs-index:
+.. _docs-starter-kit-2.0-external-sphinx:
 
-================
-|service| Guides
-================
+=========================================================
+Docs Starter Kit (for Sphinx, Public GitHub Repositories)
+=========================================================
 
-*Last updated:* |today|
+.. include:: ../README.md
 
-This file displays the following |service| Guides.
 
 .. toctree::
-   :maxdepth: 1
+   :hidden:
+   :maxdepth: 2
 
-   ../template-user-guide/index.rst
-   ../template-api-guide/index.rst
-   ../template-simple-project/index.rst
+   Sphinx Starter Kit<self>
+   style-guidelines.md
