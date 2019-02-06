@@ -4,7 +4,7 @@
 Docs Starter Kit (for Sphinx, Public GitHub Repositories)
 =========================================================
 
-.. include:: ../../README.md
+.. include:: ../README.md
 
 
 .. toctree::
