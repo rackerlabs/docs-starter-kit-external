@@ -24,7 +24,7 @@ can use GitHub Desktop or another GitHub GUI instead to accomplish the steps.
 
     ```
     cd docs-starter-kit
-    git remote add --track master upstream git@github.rackspace.com:IX/docs-starter-kit.git
+    git remote add --track master upstream git@github.com:rackerlabs/docs-SDP.git
     ```
     Start new changes with the following steps.
 
