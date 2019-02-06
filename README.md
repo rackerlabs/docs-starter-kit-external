@@ -1,5 +1,5 @@
 
-# Welcome to docs-starter-kit v2.0 repo!
+# Welcome to docs-starter-kit v3.0 external repo!
 
 This repository (repo) contains templates and instructions to help you set
 up your own documentation repo for User Guides and API Guides.
