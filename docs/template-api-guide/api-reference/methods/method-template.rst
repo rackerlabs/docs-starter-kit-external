@@ -9,9 +9,9 @@ Document an API method
 
 This template provides structure, guidelines, and example content for
 documenting a single HTTP request (for example, ``GET /v2.0/servers``). For
-more guidelines, see https://github.rackspace.com/IX/docs-starter-kit/blob/master/api-guide-template/api-docs/api-reference/methods/http-request-documentation-guidelines.rst.
+more guidelines, see https://github.com/rackerlabs/docs-starter-kit-external/blob/master/api-guide-template/api-docs/api-reference/methods/http-request-documentation-guidelines.rst.
 For an extended example, see
-https://github.rackspace.com/IX/docs-starter-kit/blob/master/api-guide-template/api-docs/api-reference/methods/http-request-example-topic.rst.
+https://github.com/rackerlabs/docs-starter-kit-external/blob/master/api-guide-template/api-docs/api-reference/methods/http-request-example-topic.rst.
 
 Following the title, show the URI in a code block (no label). For example:
 

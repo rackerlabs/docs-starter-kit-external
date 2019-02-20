@@ -24,7 +24,7 @@ can use GitHub Desktop or another GitHub GUI instead to accomplish the steps.
 
     ```
     cd docs-starter-kit
-    git remote add --track master upstream git@github.rackspace.com:IX/docs-starter-kit-external.git
+    git remote add --track master upstream git@github.com:rackerlabs/docs-SDP.git
     ```
     Start new changes with the following steps.
 
@@ -65,12 +65,12 @@ can use GitHub Desktop or another GitHub GUI instead to accomplish the steps.
 
 10. Create a pull request (PR) to the upstream repo for your branch:
 
-    a. Go to https://github.rackspace.com/IX/docs-starter-kit.
+    a. Go to https://github.rackspace.com/IX/docs-starter-kit-external.
 
     b. Click the **Create pull request** button.
 
     c. If this PR is related to an outstanding
-      [GitHub issue](https://github.rackspace.com/IX/docs-starter-kit/issues), include a link to that GitHub issue in the comment.
+      [GitHub issue](https://github.rackspace.com/IX/docs-starter-kit-external/issues), include a link to that GitHub issue in the comment.
 
 11. The Information Development team reviews your PR.
 
