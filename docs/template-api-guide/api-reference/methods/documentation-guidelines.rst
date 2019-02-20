@@ -14,7 +14,7 @@ structure and guidelines for content and style within each section.
      Headings in parentheses indicate parts of a section that do not have a
      heading in the template. For an example of the template with content that
      follows these guidelines, see
-     https://github.rackspace.com/IX/docs-starter-kit/blob/master/api-guide-template/api-docs/api-reference/methods/http-request-example-topic.rst.
+     https://github.com/rackerlabs/docs-starter-kit-external/blob/master/api-guide-template/api-docs/api-reference/methods/http-request-example-topic.rst.
 
 Title
 -----

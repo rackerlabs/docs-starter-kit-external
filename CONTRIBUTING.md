@@ -1,6 +1,6 @@
 # Contributor guidelines
 
-These guidelines provide the general process for maintaining source code for the instructions and templates in the docs-starter-kit repository (repo).
+These guidelines provide the general process for maintaining source code for the instructions and templates in the docs-starter-kit-external repository (repo).
 
 - [Repo description](#repo-description)
 - [Updating and adding content](#updating-and-adding-content)
