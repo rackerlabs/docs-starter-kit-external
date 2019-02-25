@@ -1,6 +1,6 @@
 {
-  "contentIDBase": "https://github.com/<repoName>/<version>/",
-  "githubUrl": "https://github.com/rackerlabs/<reponame>/",
+  "contentIDBase": "https://github.com/rackerlabs/docs-starter-kit-external",
+  "githubUrl": "https://github.com/rackerlabs/docs-starter-kit-external/",
   "githubBranch": "master",
   "meta": {
     "preferGithubIssues": true
