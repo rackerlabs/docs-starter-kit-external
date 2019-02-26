@@ -13,8 +13,6 @@ target/
 build/
 _build/
 /build-*.log.gz
-*.pdf
-glossary.rst
 *.mo
 
 # Python compiled files
