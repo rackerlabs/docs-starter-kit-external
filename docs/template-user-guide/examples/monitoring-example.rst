@@ -5,7 +5,7 @@ Monitoring (example)
 ====================
 
 AWS CloudWatch is the primary monitoring system used by our
-**Fanatical Support**\® for AWS support teams. CloudWatch provides a wide
+Fanatical Support for AWS support teams. CloudWatch provides a wide
 variety of metrics that cover the entire suite of AWS services, from CPU
 utilization and disk I/O on EC2 instances to network throughput of ELB load
 balancers.
