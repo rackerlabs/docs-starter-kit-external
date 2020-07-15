@@ -3,7 +3,8 @@
 To contribute content to this repository (repo), use the GitHub workflow described here. To follow the entire contribution process, go to
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
-**Note:** This workflow shows how to make changes to the repo from the command line by using git commands. If you do not want to use the command line, you
+**Note:** This workflow shows how to make changes to the repo from the command
+line by using git commands. If you do not want to use the command line, you
 can use GitHub Desktop or another GitHub GUI instead to accomplish the steps.
 
 ## Prerequisite
